@@ -57,8 +57,8 @@ To poll a queue for messages:
 maybe_msg = basic_get(chan1, QUEUE1, false)
 
 # check if we got a message
-if !isnull(maybe_msg)
-    msg = get(maybe_msg)
+if !isnothing(maybe_msg)
+    msg = maybe_msg
 
     # process msg...
 
